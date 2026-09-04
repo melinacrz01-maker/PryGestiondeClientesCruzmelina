@@ -78,5 +78,27 @@ namespace PryGestiondeClientesCruzmelina
             AD.Dispose();
             return c;
         }
+        public decimal Totaldeuda()
+        {
+            decimal total = 0;
+            string DatosLeidos = "";
+            string[] vecDatos = new string[4];
+            StreamReader AD = new StreamReader(NombreArchivo);
+            DatosLeidos = AD.ReadLine();
+            while (DatosLeidos != null)
+            {
+                vecDatos = DatosLeidos.Split(';');
+
+                // grilla.Rows.Add(vecDatos[0], vecDatos[1], vecDatos[3], vecDatos[2]);
+
+                total = total + Convert.ToDecimal(vecDatos[2]);
+
+                DatosLeidos = AD.ReadLine();
+            }
+            AD.Close();
+            AD.Dispose();
+
+            return total;
+        }
     }
 }

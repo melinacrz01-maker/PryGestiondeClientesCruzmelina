@@ -20,6 +20,10 @@ namespace PryGestiondeClientesCruzmelina
         private void btnListar_Click(object sender, EventArgs e)
         {
             x.Listar(dgvTabla);
+            lblclientescant.Text = x.Cantidadclientes().ToString();
+            lblDeudatotal.Text = x.Totaldeuda().ToString();
+            
+
         }
 
         private void FrmListadoClientes_Load(object sender, EventArgs e)
