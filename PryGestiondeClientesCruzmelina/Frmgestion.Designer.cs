@@ -54,7 +54,7 @@
             // 
             // sistemaToolStripMenuItem
             // 
-            this.sistemaToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.sistemaToolStripMenuItem.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.sistemaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem});
             this.sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
@@ -63,6 +63,7 @@
             // 
             // salirToolStripMenuItem
             // 
+            this.salirToolStripMenuItem.BackColor = System.Drawing.Color.Beige;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.salirToolStripMenuItem.Text = "Salir";
@@ -70,7 +71,7 @@
             // 
             // clientesToolStripMenuItem
             // 
-            this.clientesToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
+            this.clientesToolStripMenuItem.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarNuevosClientesToolStripMenuItem,
             this.listadoDeTodosLosClientesToolStripMenuItem,
@@ -82,7 +83,7 @@
             // 
             // agregarNuevosClientesToolStripMenuItem
             // 
-            this.agregarNuevosClientesToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.agregarNuevosClientesToolStripMenuItem.BackColor = System.Drawing.Color.LemonChiffon;
             this.agregarNuevosClientesToolStripMenuItem.Name = "agregarNuevosClientesToolStripMenuItem";
             this.agregarNuevosClientesToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.agregarNuevosClientesToolStripMenuItem.Text = "Agregar nuevos clientes..";
@@ -90,7 +91,7 @@
             // 
             // listadoDeTodosLosClientesToolStripMenuItem
             // 
-            this.listadoDeTodosLosClientesToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.listadoDeTodosLosClientesToolStripMenuItem.BackColor = System.Drawing.Color.LemonChiffon;
             this.listadoDeTodosLosClientesToolStripMenuItem.Name = "listadoDeTodosLosClientesToolStripMenuItem";
             this.listadoDeTodosLosClientesToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.listadoDeTodosLosClientesToolStripMenuItem.Text = "Listado de todos los clientes";
@@ -98,7 +99,7 @@
             // 
             // listadoDeClientesDeuToolStripMenuItem
             // 
-            this.listadoDeClientesDeuToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.listadoDeClientesDeuToolStripMenuItem.BackColor = System.Drawing.Color.LemonChiffon;
             this.listadoDeClientesDeuToolStripMenuItem.Name = "listadoDeClientesDeuToolStripMenuItem";
             this.listadoDeClientesDeuToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.listadoDeClientesDeuToolStripMenuItem.Text = "Listado de clientes deudores";
@@ -106,14 +107,14 @@
             // 
             // listadoDeClientesOrdenadosPorToolStripMenuItem
             // 
-            this.listadoDeClientesOrdenadosPorToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.listadoDeClientesOrdenadosPorToolStripMenuItem.BackColor = System.Drawing.Color.LemonChiffon;
             this.listadoDeClientesOrdenadosPorToolStripMenuItem.Name = "listadoDeClientesOrdenadosPorToolStripMenuItem";
             this.listadoDeClientesOrdenadosPorToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.listadoDeClientesOrdenadosPorToolStripMenuItem.Text = "Listado de clientes ordenados por..";
             // 
             // vendedoresToolStripMenuItem
             // 
-            this.vendedoresToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.vendedoresToolStripMenuItem.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.vendedoresToolStripMenuItem.Name = "vendedoresToolStripMenuItem";
             this.vendedoresToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.vendedoresToolStripMenuItem.Text = "Vendedores";
@@ -122,7 +123,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackColor = System.Drawing.Color.Beige;
+            this.BackgroundImage = global::PryGestiondeClientesCruzmelina.Properties.Resources.RhqfEC2Dc4d19XbxKPpQ;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

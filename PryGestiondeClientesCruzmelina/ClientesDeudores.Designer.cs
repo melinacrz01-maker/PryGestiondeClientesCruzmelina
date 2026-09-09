@@ -79,12 +79,14 @@
             // 
             // btnListaR
             // 
-            this.btnListaR.Location = new System.Drawing.Point(371, 329);
+            this.btnListaR.BackColor = System.Drawing.Color.DarkKhaki;
+            this.btnListaR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaR.Location = new System.Drawing.Point(354, 329);
             this.btnListaR.Name = "btnListaR";
             this.btnListaR.Size = new System.Drawing.Size(97, 35);
             this.btnListaR.TabIndex = 16;
             this.btnListaR.Text = "Listar";
-            this.btnListaR.UseVisualStyleBackColor = true;
+            this.btnListaR.UseVisualStyleBackColor = false;
             this.btnListaR.Click += new System.EventHandler(this.btnListaR_Click);
             // 
             // lblDEUDAclientes
@@ -151,6 +153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(509, 409);
             this.Controls.Add(this.btnListaR);
             this.Controls.Add(this.lblDEUDAclientes);

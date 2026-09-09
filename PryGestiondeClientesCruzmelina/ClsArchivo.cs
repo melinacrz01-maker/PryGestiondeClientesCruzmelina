@@ -108,9 +108,11 @@ namespace PryGestiondeClientesCruzmelina
             Int32 C = 0;
             StreamReader AD = new StreamReader(NombreArchivo);
             DatosLeidos = AD.ReadLine();
+
             while (DatosLeidos != null)
             {
                 vecDatos = DatosLeidos.Split(';');
+                
                 total = total + Convert.ToDecimal(vecDatos[2]);
                 C++;
                 DatosLeidos = AD.ReadLine();
@@ -133,6 +135,7 @@ namespace PryGestiondeClientesCruzmelina
             DatosLeidos = AD.ReadLine();
 
             Grilla.Rows.Clear();
+
             while (DatosLeidos != null)
             {
                 vecDatos = DatosLeidos.Split(';');
