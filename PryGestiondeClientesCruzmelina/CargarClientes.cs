@@ -25,6 +25,19 @@ namespace PryGestiondeClientesCruzmelina
             MessageBox.Show("Se ha cargado correctamente el cliente", "Carga de clientes", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             txtCode.Clear();
+            txtCredito.Clear();
+            txtDeuda.Clear();
+            txtNombre.Clear();
+        }
+
+        private void grbDatos_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Frmagregarclientes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

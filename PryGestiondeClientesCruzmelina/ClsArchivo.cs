@@ -100,5 +100,292 @@ namespace PryGestiondeClientesCruzmelina
 
             return total;
         }
-    }
+        public decimal promedio()
+        {
+            string DatosLeidos = "";
+            string[] vecDatos = new string[4];
+            decimal total = 0;
+            Int32 C = 0;
+            StreamReader AD = new StreamReader(NombreArchivo);
+            DatosLeidos = AD.ReadLine();
+            while (DatosLeidos != null)
+            {
+                vecDatos = DatosLeidos.Split(';');
+                total = total + Convert.ToDecimal(vecDatos[2]);
+                C++;
+                DatosLeidos = AD.ReadLine();
+            }
+            AD.Close();
+            AD.Dispose();
+
+            return total;
+        }
+
+        public void listardeudores (DataGridView Grilla)
+        {
+            string DatosLeidos = "";
+
+            string[] vecDatos = new string[4];
+
+
+            StreamReader AD = new StreamReader(NombreArchivo);
+
+            DatosLeidos = AD.ReadLine();
+
+            Grilla.Rows.Clear();
+            while (DatosLeidos != null)
+            {
+                vecDatos = DatosLeidos.Split(';');
+
+                if (Convert.ToDecimal(vecDatos[2]) > 0)
+                {
+                    Grilla.Rows.Add(vecDatos[0], vecDatos[1], vecDatos[3], vecDatos[2]);
+                }
+                    DatosLeidos = AD.ReadLine();
+            }
+
+            AD.Close();
+            AD.Dispose();
+        }
+
+        public int Cantidaddeudores()
+        {
+
+            string DatosLeidos = "";
+            string[] vecDatos = new string[4];
+            Int32 C = 0;
+            StreamReader AD = new StreamReader(NombreArchivo);
+            DatosLeidos = AD.ReadLine();
+
+
+            while (DatosLeidos != null)
+            {
+                vecDatos = DatosLeidos.Split(';');
+                if (Convert.ToDecimal(vecDatos[2]) > 0)
+
+                {
+                    C++;
+                }
+
+                // grilla.Rows.Add(vecDatos[0], vecDatos[1], vecDatos[3], vecDatos[2]);
+
+                DatosLeidos = AD.ReadLine();
+            }
+            AD.Close();
+            AD.Dispose();
+
+            return C;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
 }

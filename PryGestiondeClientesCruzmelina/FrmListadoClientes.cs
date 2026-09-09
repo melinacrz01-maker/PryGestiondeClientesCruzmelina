@@ -30,5 +30,25 @@ namespace PryGestiondeClientesCruzmelina
         {
 
         }
+
+        private void lblclientescant_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDeudatotal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbldeuda_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvTabla_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

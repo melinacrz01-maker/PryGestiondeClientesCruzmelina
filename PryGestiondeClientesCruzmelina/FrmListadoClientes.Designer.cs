@@ -56,6 +56,7 @@
             this.dgvTabla.Name = "dgvTabla";
             this.dgvTabla.Size = new System.Drawing.Size(438, 237);
             this.dgvTabla.TabIndex = 0;
+            this.dgvTabla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabla_CellContentClick);
             // 
             // Column4
             // 
@@ -85,6 +86,7 @@
             this.lbldeuda.Size = new System.Drawing.Size(79, 13);
             this.lbldeuda.TabIndex = 1;
             this.lbldeuda.Text = "Total de deuda";
+            this.lbldeuda.Click += new System.EventHandler(this.lbldeuda_Click);
             // 
             // lblcantidad
             // 
@@ -119,6 +121,7 @@
             this.lblDeudatotal.Name = "lblDeudatotal";
             this.lblDeudatotal.Size = new System.Drawing.Size(150, 23);
             this.lblDeudatotal.TabIndex = 5;
+            this.lblDeudatotal.Click += new System.EventHandler(this.lblDeudatotal_Click);
             // 
             // lblclientescant
             // 
@@ -127,6 +130,7 @@
             this.lblclientescant.Name = "lblclientescant";
             this.lblclientescant.Size = new System.Drawing.Size(150, 23);
             this.lblclientescant.TabIndex = 6;
+            this.lblclientescant.Click += new System.EventHandler(this.lblclientescant_Click);
             // 
             // lblpromdeuda
             // 
@@ -150,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 445);
+            this.ClientSize = new System.Drawing.Size(596, 500);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.lblpromdeuda);
             this.Controls.Add(this.lblclientescant);

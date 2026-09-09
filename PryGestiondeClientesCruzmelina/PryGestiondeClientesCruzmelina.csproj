@@ -52,6 +52,12 @@
     <Compile Include="CargarClientes.Designer.cs">
       <DependentUpon>CargarClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientesDeudores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientesDeudores.Designer.cs">
+      <DependentUpon>ClientesDeudores.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClsArchivo.cs" />
     <Compile Include="Frmgestion.cs">
       <SubType>Form</SubType>
@@ -69,6 +75,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CargarClientes.resx">
       <DependentUpon>CargarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientesDeudores.resx">
+      <DependentUpon>ClientesDeudores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frmgestion.resx">
       <DependentUpon>Frmgestion.cs</DependentUpon>

@@ -33,5 +33,20 @@ namespace PryGestiondeClientesCruzmelina
             FrmListadoClientes frmListadoClientes = new FrmListadoClientes();
             frmListadoClientes.Show();
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void listadoDeClientesDeuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ClientesDeudores frmClientesDeudores = new ClientesDeudores();
+            frmClientesDeudores.Show();
+        }
     }
 }

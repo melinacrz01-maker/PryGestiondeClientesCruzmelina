@@ -28,129 +28,135 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.lblDeuda = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblLimite = new System.Windows.Forms.Label();
-            this.txtCode = new System.Windows.Forms.TextBox();
-            this.txtDeuda = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtCredito = new System.Windows.Forms.TextBox();
+            this.grbDatos = new System.Windows.Forms.GroupBox();
             this.btnCargar = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.txtCredito = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtDeuda = new System.Windows.Forms.TextBox();
+            this.txtCode = new System.Windows.Forms.TextBox();
+            this.lblLimite = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblDeuda = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.grbDatos.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grbDatos
             // 
-            this.groupBox1.Controls.Add(this.btnCargar);
-            this.groupBox1.Controls.Add(this.txtCredito);
-            this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Controls.Add(this.txtDeuda);
-            this.groupBox1.Controls.Add(this.txtCode);
-            this.groupBox1.Controls.Add(this.lblLimite);
-            this.groupBox1.Controls.Add(this.lblNombre);
-            this.groupBox1.Controls.Add(this.lblDeuda);
-            this.groupBox1.Controls.Add(this.lblCodigo);
-            this.groupBox1.Location = new System.Drawing.Point(40, 31);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(529, 211);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.grbDatos.Controls.Add(this.btnCargar);
+            this.grbDatos.Controls.Add(this.txtCredito);
+            this.grbDatos.Controls.Add(this.txtNombre);
+            this.grbDatos.Controls.Add(this.txtDeuda);
+            this.grbDatos.Controls.Add(this.txtCode);
+            this.grbDatos.Controls.Add(this.lblLimite);
+            this.grbDatos.Controls.Add(this.lblNombre);
+            this.grbDatos.Controls.Add(this.lblDeuda);
+            this.grbDatos.Controls.Add(this.lblCodigo);
+            this.grbDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbDatos.Location = new System.Drawing.Point(40, 31);
+            this.grbDatos.Name = "grbDatos";
+            this.grbDatos.Size = new System.Drawing.Size(538, 202);
+            this.grbDatos.TabIndex = 0;
+            this.grbDatos.TabStop = false;
+            this.grbDatos.Text = "Cargar Datos";
+            this.grbDatos.Enter += new System.EventHandler(this.grbDatos_Enter);
             // 
-            // lblCodigo
+            // btnCargar
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(43, 47);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
-            this.lblCodigo.TabIndex = 0;
-            this.lblCodigo.Text = "Codigo:";
+            this.btnCargar.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.btnCargar.ForeColor = System.Drawing.Color.Olive;
+            this.btnCargar.Location = new System.Drawing.Point(381, 136);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(104, 31);
+            this.btnCargar.TabIndex = 8;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
-            // lblDeuda
+            // txtCredito
             // 
-            this.lblDeuda.AutoSize = true;
-            this.lblDeuda.Location = new System.Drawing.Point(43, 85);
-            this.lblDeuda.Name = "lblDeuda";
-            this.lblDeuda.Size = new System.Drawing.Size(42, 13);
-            this.lblDeuda.TabIndex = 1;
-            this.lblDeuda.Text = "Deuda:";
+            this.txtCredito.Location = new System.Drawing.Point(394, 89);
+            this.txtCredito.Name = "txtCredito";
+            this.txtCredito.Size = new System.Drawing.Size(128, 22);
+            this.txtCredito.TabIndex = 7;
             // 
-            // lblNombre
+            // txtNombre
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(260, 47);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(95, 13);
-            this.lblNombre.TabIndex = 2;
-            this.lblNombre.Text = "Nombre y Apellido:";
+            this.txtNombre.Location = new System.Drawing.Point(406, 44);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(116, 22);
+            this.txtNombre.TabIndex = 6;
+            // 
+            // txtDeuda
+            // 
+            this.txtDeuda.Location = new System.Drawing.Point(106, 82);
+            this.txtDeuda.Name = "txtDeuda";
+            this.txtDeuda.Size = new System.Drawing.Size(100, 22);
+            this.txtDeuda.TabIndex = 5;
+            // 
+            // txtCode
+            // 
+            this.txtCode.Location = new System.Drawing.Point(110, 44);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(100, 22);
+            this.txtCode.TabIndex = 4;
             // 
             // lblLimite
             // 
             this.lblLimite.AutoSize = true;
             this.lblLimite.Location = new System.Drawing.Point(260, 95);
             this.lblLimite.Name = "lblLimite";
-            this.lblLimite.Size = new System.Drawing.Size(88, 13);
+            this.lblLimite.Size = new System.Drawing.Size(128, 16);
             this.lblLimite.TabIndex = 3;
             this.lblLimite.Text = "Limite de Crèdito:";
             // 
-            // txtCode
+            // lblNombre
             // 
-            this.txtCode.Location = new System.Drawing.Point(93, 47);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(100, 20);
-            this.txtCode.TabIndex = 4;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(260, 47);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(140, 16);
+            this.lblNombre.TabIndex = 2;
+            this.lblNombre.Text = "Nombre y Apellido:";
             // 
-            // txtDeuda
+            // lblDeuda
             // 
-            this.txtDeuda.Location = new System.Drawing.Point(91, 82);
-            this.txtDeuda.Name = "txtDeuda";
-            this.txtDeuda.Size = new System.Drawing.Size(100, 20);
-            this.txtDeuda.TabIndex = 5;
+            this.lblDeuda.AutoSize = true;
+            this.lblDeuda.Location = new System.Drawing.Point(43, 85);
+            this.lblDeuda.Name = "lblDeuda";
+            this.lblDeuda.Size = new System.Drawing.Size(57, 16);
+            this.lblDeuda.TabIndex = 1;
+            this.lblDeuda.Text = "Deuda:";
             // 
-            // txtNombre
+            // lblCodigo
             // 
-            this.txtNombre.Location = new System.Drawing.Point(361, 47);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(116, 20);
-            this.txtNombre.TabIndex = 6;
-            // 
-            // txtCredito
-            // 
-            this.txtCredito.Location = new System.Drawing.Point(361, 95);
-            this.txtCredito.Name = "txtCredito";
-            this.txtCredito.Size = new System.Drawing.Size(116, 20);
-            this.txtCredito.TabIndex = 7;
-            // 
-            // btnCargar
-            // 
-            this.btnCargar.Location = new System.Drawing.Point(381, 136);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(75, 23);
-            this.btnCargar.TabIndex = 8;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(43, 47);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(61, 16);
+            this.lblCodigo.TabIndex = 0;
+            this.lblCodigo.Text = "Codigo:";
             // 
             // Frmagregarclientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(622, 264);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grbDatos);
             this.Name = "Frmagregarclientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CargarClientes";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.Frmagregarclientes_Load);
+            this.grbDatos.ResumeLayout(false);
+            this.grbDatos.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grbDatos;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDeuda;
         private System.Windows.Forms.TextBox txtCode;
