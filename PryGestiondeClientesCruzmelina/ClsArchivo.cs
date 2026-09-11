@@ -13,7 +13,7 @@ namespace PryGestiondeClientesCruzmelina
 
 
     {
-        public string NombreArchivo = "clientes.csv";
+        public string NombreArchivo = "../../archivoscrz/clientes.csv ";
 
         public void Grabar(string cod, string nombre, string deuda, string limite)
         {
