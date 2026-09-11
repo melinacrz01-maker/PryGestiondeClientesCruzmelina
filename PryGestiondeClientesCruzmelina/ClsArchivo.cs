@@ -17,21 +17,21 @@ namespace PryGestiondeClientesCruzmelina
 
         public void Grabar(string cod, string nombre, string deuda, string limite)
         {
-            StreamWriter AD = new StreamWriter(NombreArchivo);
+            StreamWriter AD = new StreamWriter(NombreArchivo, true);
 
-            AD.Write("cod");
-
-            AD.Write(";");
-
-            AD.Write("nombre");
+            AD.Write(cod);
 
             AD.Write(";");
 
-            AD.Write("deuda");
+            AD.Write(nombre);
 
             AD.Write(";");
 
-            AD.WriteLine("limite");
+            AD.Write(deuda);
+
+            AD.Write(";");
+
+            AD.WriteLine(limite);
 
             AD.Close();
 
@@ -100,7 +100,7 @@ namespace PryGestiondeClientesCruzmelina
 
             return total;
         }
-        public decimal promedio()
+        public decimal Promediodeuda()
         {
             string DatosLeidos = "";
             string[] vecDatos = new string[4];
@@ -120,7 +120,12 @@ namespace PryGestiondeClientesCruzmelina
             AD.Close();
             AD.Dispose();
 
-            return total;
+            if (C == 0)
+            {
+                return 0;
+            }
+
+            return total / C;
         }
 
         public void listardeudores (DataGridView Grilla)
@@ -178,6 +183,36 @@ namespace PryGestiondeClientesCruzmelina
             AD.Dispose();
 
             return C;
+        }
+
+        public decimal Promediodeudores()
+        {
+            string DatosLeidos = "";
+            string[] vecDatos = new string[4];
+            decimal total = 0;
+            Int32 C = 0;
+            StreamReader AD = new StreamReader(NombreArchivo);
+            DatosLeidos = AD.ReadLine();
+
+            while (DatosLeidos != null)
+            {
+                vecDatos = DatosLeidos.Split(';');
+                if (Convert.ToDecimal(vecDatos[2]) > 0)
+                {
+                    total = total + Convert.ToDecimal(vecDatos[2]);
+                    C++;
+                }
+                DatosLeidos = AD.ReadLine();
+            }
+            AD.Close();
+            AD.Dispose();
+
+            if (C == 0)
+            {
+                return 0;
+            }
+
+            return total / C;
         }
 
 

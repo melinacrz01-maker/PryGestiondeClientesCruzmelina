@@ -22,7 +22,7 @@ namespace PryGestiondeClientesCruzmelina
             x.Listar(dgvTabla);
             lblclientescant.Text = x.Cantidadclientes().ToString();
             lblDeudatotal.Text = x.Totaldeuda().ToString();
-            
+            lblpromdeuda.Text = x.Promediodeuda().ToString();
 
         }
 

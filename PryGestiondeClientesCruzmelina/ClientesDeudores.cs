@@ -17,6 +17,8 @@ namespace PryGestiondeClientesCruzmelina
             InitializeComponent();
         }
 
+        ClsArchivo x = new ClsArchivo();
+
         private void lblDEUDAclientes_Click(object sender, EventArgs e)
         {
 
@@ -24,7 +26,10 @@ namespace PryGestiondeClientesCruzmelina
 
         private void btnListaR_Click(object sender, EventArgs e)
         {
-
+            x.listardeudores(dgvCuadro);
+            lblDeudatotal.Text = x.Totaldeuda().ToString();
+            lblclientescantA.Text = x.Cantidaddeudores().ToString();
+            lblDEUDAclientes.Text = x.Promediodeudores().ToString();
         }
 
         private void ClientesDeudores_Load(object sender, EventArgs e)
