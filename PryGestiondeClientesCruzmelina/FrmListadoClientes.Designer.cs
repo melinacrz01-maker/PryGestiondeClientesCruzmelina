@@ -83,6 +83,7 @@
             // 
             this.lbldeuda.AutoSize = true;
             this.lbldeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldeuda.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.lbldeuda.Location = new System.Drawing.Point(24, 285);
             this.lbldeuda.Name = "lbldeuda";
             this.lbldeuda.Size = new System.Drawing.Size(103, 15);
@@ -94,6 +95,7 @@
             // 
             this.lblcantidad.AutoSize = true;
             this.lblcantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcantidad.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.lblcantidad.Location = new System.Drawing.Point(24, 322);
             this.lblcantidad.Name = "lblcantidad";
             this.lblcantidad.Size = new System.Drawing.Size(138, 15);
@@ -104,6 +106,7 @@
             // 
             this.lblPromedio.AutoSize = true;
             this.lblPromedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPromedio.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.lblPromedio.Location = new System.Drawing.Point(24, 366);
             this.lblPromedio.Name = "lblPromedio";
             this.lblPromedio.Size = new System.Drawing.Size(133, 15);
@@ -148,6 +151,7 @@
             // 
             this.btnListar.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListar.ForeColor = System.Drawing.Color.Olive;
             this.btnListar.Location = new System.Drawing.Point(390, 314);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(75, 32);
@@ -158,11 +162,12 @@
             // 
             // btnreportes
             // 
-            this.btnreportes.BackColor = System.Drawing.Color.Khaki;
+            this.btnreportes.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.btnreportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnreportes.ForeColor = System.Drawing.Color.Olive;
             this.btnreportes.Location = new System.Drawing.Point(336, 360);
             this.btnreportes.Name = "btnreportes";
-            this.btnreportes.Size = new System.Drawing.Size(129, 27);
+            this.btnreportes.Size = new System.Drawing.Size(129, 29);
             this.btnreportes.TabIndex = 9;
             this.btnreportes.Text = "Generar Reportes";
             this.btnreportes.UseVisualStyleBackColor = false;
@@ -172,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.Color.LightYellow;
             this.ClientSize = new System.Drawing.Size(509, 433);
             this.Controls.Add(this.btnreportes);
             this.Controls.Add(this.btnListar);

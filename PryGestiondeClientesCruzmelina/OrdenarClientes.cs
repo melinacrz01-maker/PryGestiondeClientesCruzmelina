@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PryGestiondeClientesCruzmelina
 {
-    public partial class OrdenarClientes : Form
+    public partial class FrmClientesOrdenar : Form
     {
-        public OrdenarClientes()
+        public FrmClientesOrdenar()
         {
             InitializeComponent();
         }
