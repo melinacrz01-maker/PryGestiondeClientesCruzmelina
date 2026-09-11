@@ -41,6 +41,7 @@
             this.lblclientescant = new System.Windows.Forms.Label();
             this.lblpromdeuda = new System.Windows.Forms.Label();
             this.btnListar = new System.Windows.Forms.Button();
+            this.btnreportes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvTabla.Location = new System.Drawing.Point(88, 50);
+            this.dgvTabla.Location = new System.Drawing.Point(27, 32);
             this.dgvTabla.Name = "dgvTabla";
             this.dgvTabla.Size = new System.Drawing.Size(438, 237);
             this.dgvTabla.TabIndex = 0;
@@ -81,9 +82,10 @@
             // lbldeuda
             // 
             this.lbldeuda.AutoSize = true;
-            this.lbldeuda.Location = new System.Drawing.Point(301, 315);
+            this.lbldeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldeuda.Location = new System.Drawing.Point(24, 285);
             this.lbldeuda.Name = "lbldeuda";
-            this.lbldeuda.Size = new System.Drawing.Size(79, 13);
+            this.lbldeuda.Size = new System.Drawing.Size(103, 15);
             this.lbldeuda.TabIndex = 1;
             this.lbldeuda.Text = "Total de deuda";
             this.lbldeuda.Click += new System.EventHandler(this.lbldeuda_Click);
@@ -91,25 +93,27 @@
             // lblcantidad
             // 
             this.lblcantidad.AutoSize = true;
-            this.lblcantidad.Location = new System.Drawing.Point(277, 341);
+            this.lblcantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcantidad.Location = new System.Drawing.Point(24, 322);
             this.lblcantidad.Name = "lblcantidad";
-            this.lblcantidad.Size = new System.Drawing.Size(103, 13);
+            this.lblcantidad.Size = new System.Drawing.Size(138, 15);
             this.lblcantidad.TabIndex = 2;
             this.lblcantidad.Text = "Cantidad de clientes";
             // 
             // lblPromedio
             // 
             this.lblPromedio.AutoSize = true;
-            this.lblPromedio.Location = new System.Drawing.Point(281, 374);
+            this.lblPromedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPromedio.Location = new System.Drawing.Point(24, 366);
             this.lblPromedio.Name = "lblPromedio";
-            this.lblPromedio.Size = new System.Drawing.Size(99, 13);
+            this.lblPromedio.Size = new System.Drawing.Size(133, 15);
             this.lblPromedio.TabIndex = 3;
             this.lblPromedio.Text = "Promedio de deuda";
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(465, 341);
+            this.lblTotal.Location = new System.Drawing.Point(226, 322);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(0, 13);
             this.lblTotal.TabIndex = 4;
@@ -117,44 +121,60 @@
             // lblDeudatotal
             // 
             this.lblDeudatotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDeudatotal.Location = new System.Drawing.Point(386, 305);
+            this.lblDeudatotal.Location = new System.Drawing.Point(163, 286);
             this.lblDeudatotal.Name = "lblDeudatotal";
-            this.lblDeudatotal.Size = new System.Drawing.Size(150, 23);
+            this.lblDeudatotal.Size = new System.Drawing.Size(126, 23);
             this.lblDeudatotal.TabIndex = 5;
             this.lblDeudatotal.Click += new System.EventHandler(this.lblDeudatotal_Click);
             // 
             // lblclientescant
             // 
             this.lblclientescant.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblclientescant.Location = new System.Drawing.Point(386, 331);
+            this.lblclientescant.Location = new System.Drawing.Point(163, 323);
             this.lblclientescant.Name = "lblclientescant";
-            this.lblclientescant.Size = new System.Drawing.Size(150, 23);
+            this.lblclientescant.Size = new System.Drawing.Size(126, 23);
             this.lblclientescant.TabIndex = 6;
             this.lblclientescant.Click += new System.EventHandler(this.lblclientescant_Click);
             // 
             // lblpromdeuda
             // 
             this.lblpromdeuda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblpromdeuda.Location = new System.Drawing.Point(386, 364);
+            this.lblpromdeuda.Location = new System.Drawing.Point(163, 366);
             this.lblpromdeuda.Name = "lblpromdeuda";
-            this.lblpromdeuda.Size = new System.Drawing.Size(150, 23);
+            this.lblpromdeuda.Size = new System.Drawing.Size(126, 23);
             this.lblpromdeuda.TabIndex = 7;
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(451, 400);
+            this.btnListar.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListar.Location = new System.Drawing.Point(390, 314);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(75, 23);
+            this.btnListar.Size = new System.Drawing.Size(75, 32);
             this.btnListar.TabIndex = 8;
             this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.UseVisualStyleBackColor = false;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            // 
+            // btnreportes
+            // 
+            this.btnreportes.BackColor = System.Drawing.Color.LemonChiffon;
+            this.btnreportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnreportes.Location = new System.Drawing.Point(336, 360);
+            this.btnreportes.Name = "btnreportes";
+            this.btnreportes.Size = new System.Drawing.Size(129, 27);
+            this.btnreportes.TabIndex = 9;
+            this.btnreportes.Text = "Generar Reportes";
+            this.btnreportes.UseVisualStyleBackColor = false;
+            this.btnreportes.Click += new System.EventHandler(this.btnreportes_Click);
             // 
             // FrmListadoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 500);
+            this.BackColor = System.Drawing.SystemColors.Info;
+            this.ClientSize = new System.Drawing.Size(509, 433);
+            this.Controls.Add(this.btnreportes);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.lblpromdeuda);
             this.Controls.Add(this.lblclientescant);
@@ -189,5 +209,6 @@
         private System.Windows.Forms.Label lblclientescant;
         private System.Windows.Forms.Label lblpromdeuda;
         private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Button btnreportes;
     }
 }

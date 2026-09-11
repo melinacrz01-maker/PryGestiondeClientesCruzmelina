@@ -43,6 +43,7 @@
             // 
             // grbDatos
             // 
+            this.grbDatos.BackColor = System.Drawing.Color.Wheat;
             this.grbDatos.Controls.Add(this.btnCargar);
             this.grbDatos.Controls.Add(this.txtCredito);
             this.grbDatos.Controls.Add(this.txtNombre);
@@ -63,8 +64,8 @@
             // 
             // btnCargar
             // 
-            this.btnCargar.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.btnCargar.ForeColor = System.Drawing.Color.Olive;
+            this.btnCargar.BackColor = System.Drawing.Color.Cornsilk;
+            this.btnCargar.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.btnCargar.Location = new System.Drawing.Point(381, 136);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(104, 31);

@@ -13,7 +13,7 @@ namespace PryGestiondeClientesCruzmelina
 
 
     {
-        public string NombreArchivo = "../../archivoscrz/clientes.csv ";
+        public string NombreArchivo = "../../archivoscrz/clientes.csv";
 
         public void Grabar(string cod, string nombre, string deuda, string limite)
         {
@@ -112,7 +112,7 @@ namespace PryGestiondeClientesCruzmelina
             while (DatosLeidos != null)
             {
                 vecDatos = DatosLeidos.Split(';');
-                
+
                 total = total + Convert.ToDecimal(vecDatos[2]);
                 C++;
                 DatosLeidos = AD.ReadLine();
@@ -128,7 +128,7 @@ namespace PryGestiondeClientesCruzmelina
             return total / C;
         }
 
-        public void listardeudores (DataGridView Grilla)
+        public void listardeudores(DataGridView Grilla)
         {
             string DatosLeidos = "";
 
@@ -149,7 +149,7 @@ namespace PryGestiondeClientesCruzmelina
                 {
                     Grilla.Rows.Add(vecDatos[0], vecDatos[1], vecDatos[3], vecDatos[2]);
                 }
-                    DatosLeidos = AD.ReadLine();
+                DatosLeidos = AD.ReadLine();
             }
 
             AD.Close();
@@ -215,215 +215,252 @@ namespace PryGestiondeClientesCruzmelina
             return total / C;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        public void GenerarReporte()
+        {
+            string DatosLeidos = "";
+
+            string[] vecDatos = new string[4];
+
+            Int32 Cantidad = 0;
+            Int32 total = 0;
+
+            StreamWriter Reporte = new StreamWriter("../../Archivos/Reporte.csv");
+            Reporte.Write("");
+            Reporte.WriteLine("Listado de Clientes");
+            Reporte.WriteLine("");
+            Reporte.WriteLine("Codigo;Nombre;Limite;Deuda");
+
+            StreamReader AD = new StreamReader(NombreArchivo);
+
+
+            DatosLeidos = AD.ReadLine();
+
+            while (DatosLeidos != null)
+            {
+                vecDatos = DatosLeidos.Split(';');
+                Reporte.Write(vecDatos[0]);
+                Reporte.Write(";");
+
+                Reporte.Write(vecDatos[1]);
+                Reporte.Write(";");
+
+                Reporte.Write(vecDatos[3]);
+                Reporte.Write(";");
+                Cantidad++;
+                total = total + Convert.ToInt32(vecDatos[2]);
+                {
+                    Reporte.WriteLine(vecDatos[2]);
+                    DatosLeidos = AD.ReadLine();
+
+                    {
+                        AD.Dispose();
+                        AD.Close();
+
+                        Reporte.Write("Total de deuda:");
+                        Reporte.WriteLine(total);
+                        Reporte.Write("Cantidad de clientes:");
+                        Reporte.WriteLine(Cantidad);
+                        Reporte.Write("Promedio de deuda:");
+                        Reporte.WriteLine(total/Cantidad);
+                        Reporte.Close();
+                        Reporte.Dispose();
+
+                    }
+
+                }
+            }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
 }

@@ -50,5 +50,11 @@ namespace PryGestiondeClientesCruzmelina
         {
 
         }
+
+        private void btnreportes_Click(object sender, EventArgs e)
+        {
+            x.GenerarReporte();
+            MessageBox.Show("Reporte generado correctamente en la carpeta de reportes");
+        }
     }
 }
