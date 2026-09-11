@@ -158,7 +158,7 @@
             // 
             // btnreportes
             // 
-            this.btnreportes.BackColor = System.Drawing.Color.LemonChiffon;
+            this.btnreportes.BackColor = System.Drawing.Color.Khaki;
             this.btnreportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnreportes.Location = new System.Drawing.Point(336, 360);
             this.btnreportes.Name = "btnreportes";
