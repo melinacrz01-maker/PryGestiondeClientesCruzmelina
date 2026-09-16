@@ -13,8 +13,60 @@ namespace PryGestiondeClientesCruzmelina
     internal class ClsArchivo
 
 
+
     {
         public string NombreArchivo = "../../archivoscrz/clientes.csv";
+
+        //Declaracion de variables
+        public struct RegCli
+
+        {
+            public Int32 codigo;
+            public string nombre;
+            public Decimal deuda;
+            public Decimal limite;
+
+        }
+        //Metodo para grabar un registro en el archivo
+        static public RegCli[] vector = new RegCli[100];
+
+        //Declaracion del Indice
+        static public Int32 IND = 0;
+        private void cargarvector()
+        {
+            string DatosLeidos = "";
+            string[] vecDatos = new string[4];
+
+            StreamReader AD = new StreamReader(NombreArchivo);
+            DatosLeidos = AD.ReadLine();
+            //Grilla.Rows.Clear();
+
+            while (DatosLeidos != null)
+            {
+                vecDatos = DatosLeidos.Split(';');
+                vector[IND].codigo = Convert.ToInt32(vecDatos[0]);
+                vector[IND].nombre = vecDatos[1];
+                vector[IND].deuda = Convert.ToDecimal(vecDatos[2]);
+                vector[IND].limite = Convert.ToDecimal(vecDatos[3]);
+                IND++;
+                DatosLeidos = AD.ReadLine();
+            }
+            AD.Close();
+            AD.Dispose();
+        }
+        private void OrdenarClientes()
+        {
+            
+        }
+
+        
+
+
+
+
+
+
+
 
         public void Grabar(string cod, string nombre, string deuda, string limite)
         {
