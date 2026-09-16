@@ -225,7 +225,7 @@ namespace PryGestiondeClientesCruzmelina
             Int32 Cantidad = 0;
             Decimal total = 0;
 
-            StreamWriter Reporte = new StreamWriter("../../Archivos/Reporte.csv");
+            StreamWriter Reporte = new StreamWriter("../../Archivoscrz/Reporte.csv");
             Reporte.Write("");
             Reporte.WriteLine("Listado de Clientes");
             Reporte.WriteLine("");
@@ -255,24 +255,23 @@ namespace PryGestiondeClientesCruzmelina
                 total = total + Convert.ToDecimal(vecDatos[2]);
 
                 DatosLeidos = AD.ReadLine();
-
-                while (DatosLeidos != null)
-                {
-                    AD.Dispose();
-                    AD.Close();
-
-                    Reporte.Write("Total de deuda:");
-                    Reporte.WriteLine(total);
-                    Reporte.Write("Cantidad de clientes:");
-                    Reporte.WriteLine(Cantidad);
-                    Reporte.Write("Promedio de deuda:");
-                    Reporte.WriteLine(total / Cantidad);
-                    Reporte.Close();
-                    Reporte.Dispose();
-
-                 
-                }
             }
+
+            // Escribir resumen después de procesar todas las líneas y cerrar el flujo
+            if (Cantidad > 0)
+            {
+                Reporte.Write("Total de deuda:");
+                Reporte.WriteLine(total);
+
+                Reporte.Write("Cantidad de clientes:");
+                Reporte.WriteLine(Cantidad);
+
+                Reporte.Write("Promedio de deuda:");
+                Reporte.WriteLine(total / Cantidad);
+            }
+
+            Reporte.Close();
+            Reporte.Dispose();
         }
 
 
