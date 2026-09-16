@@ -36,9 +36,9 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpDatos = new System.Windows.Forms.GroupBox();
-            this.lblCampo = new System.Windows.Forms.Label();
-            this.lblModo = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblModo = new System.Windows.Forms.Label();
+            this.lblCampo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).BeginInit();
             this.grpDatos.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +57,11 @@
             // cmbDatos
             // 
             this.cmbDatos.FormattingEnabled = true;
+            this.cmbDatos.Items.AddRange(new object[] {
+            "Còdigo",
+            "Nombre y Apellido",
+            "Limite de credito",
+            "Deuda"});
             this.cmbDatos.Location = new System.Drawing.Point(93, 59);
             this.cmbDatos.Name = "cmbDatos";
             this.cmbDatos.Size = new System.Drawing.Size(143, 21);
@@ -111,26 +116,6 @@
             this.grpDatos.TabStop = false;
             this.grpDatos.Text = "Ordenar Clientes";
             // 
-            // lblCampo
-            // 
-            this.lblCampo.AutoSize = true;
-            this.lblCampo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCampo.Location = new System.Drawing.Point(35, 60);
-            this.lblCampo.Name = "lblCampo";
-            this.lblCampo.Size = new System.Drawing.Size(52, 15);
-            this.lblCampo.TabIndex = 3;
-            this.lblCampo.Text = "Campo";
-            // 
-            // lblModo
-            // 
-            this.lblModo.AutoSize = true;
-            this.lblModo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModo.Location = new System.Drawing.Point(265, 60);
-            this.lblModo.Name = "lblModo";
-            this.lblModo.Size = new System.Drawing.Size(43, 15);
-            this.lblModo.TabIndex = 4;
-            this.lblModo.Text = "Modo";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Beige;
@@ -143,6 +128,26 @@
             this.button1.Text = "Listar";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // lblModo
+            // 
+            this.lblModo.AutoSize = true;
+            this.lblModo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModo.Location = new System.Drawing.Point(265, 60);
+            this.lblModo.Name = "lblModo";
+            this.lblModo.Size = new System.Drawing.Size(43, 15);
+            this.lblModo.TabIndex = 4;
+            this.lblModo.Text = "Modo";
+            // 
+            // lblCampo
+            // 
+            this.lblCampo.AutoSize = true;
+            this.lblCampo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampo.Location = new System.Drawing.Point(35, 60);
+            this.lblCampo.Name = "lblCampo";
+            this.lblCampo.Size = new System.Drawing.Size(52, 15);
+            this.lblCampo.TabIndex = 3;
+            this.lblCampo.Text = "Campo";
+            // 
             // FrmClientesOrdenar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,6 +157,7 @@
             this.Controls.Add(this.grpDatos);
             this.Name = "FrmClientesOrdenar";
             this.Text = "OrdenarClientes";
+            this.Load += new System.EventHandler(this.FrmClientesOrdenar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).EndInit();
             this.grpDatos.ResumeLayout(false);
             this.grpDatos.PerformLayout();

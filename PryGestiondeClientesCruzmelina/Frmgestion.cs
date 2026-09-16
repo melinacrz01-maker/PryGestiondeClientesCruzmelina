@@ -48,5 +48,11 @@ namespace PryGestiondeClientesCruzmelina
             ClientesDeudores frmClientesDeudores = new ClientesDeudores();
             frmClientesDeudores.Show();
         }
+
+        private void listadoDeClientesOrdenadosPorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmClientesOrdenar frmClientesOrdenar = new FrmClientesOrdenar();
+            frmClientesOrdenar.Show();
+        }
     }
 }

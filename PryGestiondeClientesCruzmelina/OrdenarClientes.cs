@@ -16,5 +16,10 @@ namespace PryGestiondeClientesCruzmelina
         {
             InitializeComponent();
         }
+        ClsArchivo x = new ClsArchivo();
+        private void FrmClientesOrdenar_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

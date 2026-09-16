@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -222,7 +223,7 @@ namespace PryGestiondeClientesCruzmelina
             string[] vecDatos = new string[4];
 
             Int32 Cantidad = 0;
-            Int32 total = 0;
+            Decimal total = 0;
 
             StreamWriter Reporte = new StreamWriter("../../Archivos/Reporte.csv");
             Reporte.Write("");
@@ -244,29 +245,32 @@ namespace PryGestiondeClientesCruzmelina
                 Reporte.Write(vecDatos[1]);
                 Reporte.Write(";");
 
-                Reporte.Write(vecDatos[3]);
+                Reporte.Write(vecDatos[2]);
                 Reporte.Write(";");
+
+                Reporte.Write(vecDatos[3]);
+                Reporte.WriteLine(";");
                 Cantidad++;
-                total = total + Convert.ToInt32(vecDatos[2]);
+
+                total = total + Convert.ToDecimal(vecDatos[2]);
+
+                DatosLeidos = AD.ReadLine();
+
+                while (DatosLeidos != null)
                 {
-                    Reporte.WriteLine(vecDatos[2]);
-                    DatosLeidos = AD.ReadLine();
+                    AD.Dispose();
+                    AD.Close();
 
-                    {
-                        AD.Dispose();
-                        AD.Close();
+                    Reporte.Write("Total de deuda:");
+                    Reporte.WriteLine(total);
+                    Reporte.Write("Cantidad de clientes:");
+                    Reporte.WriteLine(Cantidad);
+                    Reporte.Write("Promedio de deuda:");
+                    Reporte.WriteLine(total / Cantidad);
+                    Reporte.Close();
+                    Reporte.Dispose();
 
-                        Reporte.Write("Total de deuda:");
-                        Reporte.WriteLine(total);
-                        Reporte.Write("Cantidad de clientes:");
-                        Reporte.WriteLine(Cantidad);
-                        Reporte.Write("Promedio de deuda:");
-                        Reporte.WriteLine(total/Cantidad);
-                        Reporte.Close();
-                        Reporte.Dispose();
-
-                    }
-
+                 
                 }
             }
         }
