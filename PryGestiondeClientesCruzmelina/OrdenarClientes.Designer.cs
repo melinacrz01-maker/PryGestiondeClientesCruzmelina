@@ -36,7 +36,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpDatos = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLISTARCLIENTES = new System.Windows.Forms.Button();
             this.lblModo = new System.Windows.Forms.Label();
             this.lblCampo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabla)).BeginInit();
@@ -103,7 +103,7 @@
             // grpDatos
             // 
             this.grpDatos.BackColor = System.Drawing.Color.PapayaWhip;
-            this.grpDatos.Controls.Add(this.button1);
+            this.grpDatos.Controls.Add(this.btnLISTARCLIENTES);
             this.grpDatos.Controls.Add(this.lblModo);
             this.grpDatos.Controls.Add(this.lblCampo);
             this.grpDatos.Controls.Add(this.cmbAscendente);
@@ -116,18 +116,18 @@
             this.grpDatos.TabStop = false;
             this.grpDatos.Text = "Ordenar Clientes";
             // 
-            // button1
+            // btnLISTARCLIENTES
             // 
-            this.button1.BackColor = System.Drawing.Color.Beige;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.button1.Location = new System.Drawing.Point(379, 366);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 27);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Listar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnLISTARCLIENTES.BackColor = System.Drawing.Color.Beige;
+            this.btnLISTARCLIENTES.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLISTARCLIENTES.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnLISTARCLIENTES.Location = new System.Drawing.Point(379, 366);
+            this.btnLISTARCLIENTES.Name = "btnLISTARCLIENTES";
+            this.btnLISTARCLIENTES.Size = new System.Drawing.Size(88, 27);
+            this.btnLISTARCLIENTES.TabIndex = 5;
+            this.btnLISTARCLIENTES.Text = "Listar";
+            this.btnLISTARCLIENTES.UseVisualStyleBackColor = false;
+            this.btnLISTARCLIENTES.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblModo
             // 
@@ -178,6 +178,6 @@
         private System.Windows.Forms.GroupBox grpDatos;
         private System.Windows.Forms.Label lblModo;
         private System.Windows.Forms.Label lblCampo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLISTARCLIENTES;
     }
 }

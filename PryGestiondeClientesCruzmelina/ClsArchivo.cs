@@ -34,39 +34,231 @@ namespace PryGestiondeClientesCruzmelina
         static public Int32 IND = 0;
         private void cargarvector()
         {
+            IND = 0; // MUY IMPORTANTE
+
             string DatosLeidos = "";
             string[] vecDatos = new string[4];
 
             StreamReader AD = new StreamReader(NombreArchivo);
             DatosLeidos = AD.ReadLine();
-            //Grilla.Rows.Clear();
 
             while (DatosLeidos != null)
             {
                 vecDatos = DatosLeidos.Split(';');
+
                 vector[IND].codigo = Convert.ToInt32(vecDatos[0]);
                 vector[IND].nombre = vecDatos[1];
                 vector[IND].deuda = Convert.ToDecimal(vecDatos[2]);
                 vector[IND].limite = Convert.ToDecimal(vecDatos[3]);
+
                 IND++;
                 DatosLeidos = AD.ReadLine();
             }
+
             AD.Close();
             AD.Dispose();
         }
-        private void OrdenarClientes()
+        private void OrdenarClientes(DataGridView Grilla)
         {
-            
+            RegCli aux;
+
+            for (int i = 0; i < IND - 1; i++)
+            {
+                for (int j = 0; j < IND - 1; j++)
+                {
+                    if (vector[j].codigo < vector[j + 1].codigo)
+                    {
+                        aux = vector[j];
+                        vector[j] = vector[j + 1];
+                        vector[j + 1] = aux;
+                    }
+                }
+            }
+
+            Grilla.Rows.Clear();
+
+            for (int i = 0; i < IND; i++)
+            {
+                Grilla.Rows.Add(
+                    vector[i].codigo,
+                    vector[i].nombre,
+                    vector[i].deuda,
+                    vector[i].limite
+                );
+            }
         }
 
-        
 
+        public void OrdenarPorNombreAscendente(DataGridView Grilla)
+        {
 
+            cargarvector();
+            RegCli aux;
 
+            for (int i = 0; i < IND - 1; i++)
+            {
+                for (int j = 0; j < IND - 1; j++)
+                {
+                    if (string.Compare(vector[j].nombre, vector[j + 1].nombre) > 0)
+                    {
+                        aux = vector[j];
+                        vector[j] = vector[j + 1];
+                        vector[j + 1] = aux;
+                    }
+                }
+            }
 
+            Grilla.Rows.Clear();
 
+            for (int i = 0; i < IND; i++)
+            {
+                Grilla.Rows.Add(
+                    vector[i].codigo,
+                    vector[i].nombre,
+                    vector[i].deuda,
+                    vector[i].limite
+                );
 
+            }
+        }
+        public void OrdenarPorNombreDescendente(DataGridView Grilla)
+        {
+            cargarvector();
+            RegCli aux;
 
+            for (int i = 0; i < IND - 1; i++)
+            {
+                for (int j = 0; j < IND - 1; j++)
+                {
+                    if (string.Compare(vector[j].nombre, vector[j + 1].nombre) < 0)
+                    {
+                        aux = vector[j];
+                        vector[j] = vector[j + 1];
+                        vector[j + 1] = aux;
+                    }
+                }
+            }
+
+            Grilla.Rows.Clear();
+
+            for (int i = 0; i < IND; i++)
+            {
+                Grilla.Rows.Add(
+                    vector[i].codigo,
+                    vector[i].nombre,
+                    vector[i].deuda,
+                    vector[i].limite
+                );
+            }
+
+            }
+        public void OrdenarPorDeudaAscendente(DataGridView Grilla)
+        {
+            cargarvector();
+
+            RegCli aux;
+
+            for (int i = 0; i < IND - 1; i++)
+            {
+                for (int j = 0; j < IND - 1; j++)
+                {
+                    if (vector[j].deuda > vector[j + 1].deuda)
+                    {
+                        aux = vector[j];
+                        vector[j] = vector[j + 1];
+                        vector[j + 1] = aux;
+                    }
+                }
+            }
+
+            Grilla.Rows.Clear();
+            for (int i = 0; i < IND; i++)
+            {
+                Grilla.Rows.Add(vector[i].codigo, vector[i].nombre, vector[i].deuda, vector[i].limite);
+            }
+        }
+
+        public void OrdenarPorDeudaDescendente(DataGridView Grilla)
+        {
+            cargarvector();
+
+            RegCli aux;
+
+            for (int i = 0; i < IND - 1; i++)
+            {
+                for (int j = 0; j < IND - 1; j++)
+                {
+                    if (vector[j].deuda < vector[j + 1].deuda)
+                    {
+                        aux = vector[j];
+                        vector[j] = vector[j + 1];
+                        vector[j + 1] = aux;
+                    }
+                }
+            }
+
+            Grilla.Rows.Clear();
+            for (int i = 0; i < IND; i++)
+            {
+                Grilla.Rows.Add(vector[i].codigo, vector[i].nombre, vector[i].deuda, vector[i].limite);
+            }
+        }
+        public void OrdenarPorLimiteAscendente(DataGridView Grilla)
+        {
+            cargarvector();
+            RegCli aux;
+
+            for (int i = 0; i < IND - 1; i++)
+            {
+                for (int j = 0; j < IND - 1; j++)
+                {
+                    if (vector[j].limite > vector[j + 1].limite)
+                    {
+                        aux = vector[j];
+                        vector[j] = vector  [j + 1];
+                        vector[j + 1] = aux;
+                    }
+                }
+
+            }
+
+            Grilla.Rows.Clear();
+
+            for (int i = 0; i < IND; i++)
+            {
+                Grilla.Rows.Add(vector[i].codigo, vector[i].nombre, vector[i].deuda, vector[i].limite);
+            }
+        }
+        public void OrdenarPorLimiteDescendente(DataGridView Grilla)
+        {
+            cargarvector();
+            RegCli aux;
+
+            for (int i = 0; i < IND - 1; i++)
+            {
+                for (int j = 0; j < IND - 1; j++)
+                {
+                    if (vector[j].limite < vector[j + 1].limite)
+                    {
+                        aux = vector[j];
+                        vector[j] = vector[j + 1];
+                        vector[j + 1] = aux;
+                    }
+                }
+            }
+
+            Grilla.Rows.Clear();
+
+            for (int i = 0; i < IND; i++)
+            {
+                Grilla.Rows.Add(
+                    vector[i].codigo,
+                    vector[i].nombre,
+                    vector[i].deuda,
+                    vector[i].limite
+                );
+            }
+        }
 
         public void Grabar(string cod, string nombre, string deuda, string limite)
         {
